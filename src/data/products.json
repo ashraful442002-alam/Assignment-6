@@ -17,7 +17,7 @@
     "period": "one-time",
     "tagType": "best-seller",
     "features": ["2000+ templates", "Commercial license", "Regular updates"],
-    "icon": "/src/assets/design.png"
+    "icon": "/src/assets/design-tool.png"
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
     "period": "monthly",
     "tagType": "new",
     "features": ["10M+ assets", "No attribution", "Commercial use"],
-    "icon": "/src/assets/stock.png"
+    "icon": "/src/assets/shopping-cart.png"
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "period": "monthly",
     "tagType": "popular",
     "features": ["50+ automations", "API access", "Workflow builder"],
-    "icon": "/src/assets/automation.png"
+    "icon": "/src/assets/package.png"
   },
   {
     "id": 5,
@@ -47,7 +47,7 @@
     "period": "one-time",
     "tagType": "best-seller",
     "features": ["100+ templates", "ATS optimization", "PDF export"],
-    "icon": "/src/assets/resume.png"
+    "icon": "/src/assets/portfolio.png"
   },
   {
     "id": 6,
@@ -57,6 +57,6 @@
     "period": "monthly",
     "tagType": "new",
     "features": ["5000+ assets", "Post scheduler", "Analytics dashboard"],
-    "icon": "/src/assets/social.png"
+    "icon": "/src/assets/social-media.png"
   }
 ]
