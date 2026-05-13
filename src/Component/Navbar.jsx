@@ -11,6 +11,13 @@ const Navbar = ({cart = [],setActiveTab}) => {
         }
     }
 
+    const handleScrollPricing = () => {
+  const section = document.getElementById("pricing");
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
     const [showLogin, setShowLogin] = useState(false);
 
     const handleLogin = (e) => {
@@ -47,7 +54,14 @@ const Navbar = ({cart = [],setActiveTab}) => {
                 <ul className='flex flex-col md:flex-row items-center gap-4 font-semibold text-[#101727]'>
                     <li><a className='hover:text-blue-500 duration-200' onClick={handleScrollProducts} >Products</a></li>
                     <li><a className='hover:text-blue-500 duration-200' href="/about">Features</a></li>
-                    <li><a className='hover:text-blue-500 duration-200' href="/services">Pricing</a></li>
+                    <li>
+  <a
+    onClick={handleScrollPricing}
+    className="hover:text-blue-500 duration-200 cursor-pointer"
+  >
+    Pricing
+  </a>
+</li>
                     <li><a className='hover:text-blue-500 duration-200' href="/contact">Testimonials</a></li>
                     <li><a className='hover:text-blue-500 duration-200' href="/login">FAQ</a></li>
                 </ul>
