@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
 import { FaCartArrowDown } from "react-icons/fa";
 
-const Navbar = () => {
+const Navbar = ({cart = [],setActiveTab}) => {
 
+
+    const handleScrollProducts =()=>{
+        const section = document.getElementById("products");
+        if(section){
+            section.scrollIntoView({behavior:"smooth"});
+        }
+    }
 
     const [showLogin, setShowLogin] = useState(false);
 
@@ -38,7 +45,7 @@ const Navbar = () => {
 
             <div>
                 <ul className='flex flex-col md:flex-row items-center gap-4 font-semibold text-[#101727]'>
-                    <li><a className='hover:text-blue-500 duration-200' href="/">Products</a></li>
+                    <li><a className='hover:text-blue-500 duration-200' onClick={handleScrollProducts} >Products</a></li>
                     <li><a className='hover:text-blue-500 duration-200' href="/about">Features</a></li>
                     <li><a className='hover:text-blue-500 duration-200' href="/services">Pricing</a></li>
                     <li><a className='hover:text-blue-500 duration-200' href="/contact">Testimonials</a></li>
@@ -48,7 +55,7 @@ const Navbar = () => {
 
             <div className='flex items-center gap-4'>
                 <button className='text-xl hover:text-blue-500 duration-200'>
-                    <FaCartArrowDown />
+                    <FaCartArrowDown />{cart.length}
                 </button>
 
                 <div className='relative'>
@@ -78,7 +85,7 @@ const Navbar = () => {
                     <input
                         type="email"
                         name='email'
-                        deafualtValue="admin@gmail.com"
+                        defualtValue="admin@gmail.com"
                         placeholder='Email'
                         className='input input-bordered w-full'
                         required
