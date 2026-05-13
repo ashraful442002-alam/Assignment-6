@@ -1,6 +1,6 @@
 import React from 'react';
 import { CiPlay1 } from "react-icons/ci";
-import myImage from '../assets/banner.png';
+import myImage from '/assets/banner.png';
 
 const Banner = () => {
     return (

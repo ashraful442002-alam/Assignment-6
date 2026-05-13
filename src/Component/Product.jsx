@@ -209,7 +209,7 @@ const Product = ({cart,setCart,activeTab,setActiveTab}) => {
 
     <div className="w-20 h-20 mx-auto rounded-full bg-gray-400 flex items-center justify-center shadow-lg">
         <img
-            src="/src/assets/user.png"
+            src="/assets/user.png"
             alt="user"
             className="w-10 h-10 object-contain"
         />
@@ -237,7 +237,7 @@ const Product = ({cart,setCart,activeTab,setActiveTab}) => {
 
     <div className="w-20 h-20 mx-auto rounded-full bg-gray-400 flex items-center justify-center shadow-lg">
         <img
-            src="/src/assets/package.png"
+            src="/assets/package.png"
             alt="user"
             className="w-10 h-10 object-contain"
         />
@@ -264,7 +264,7 @@ const Product = ({cart,setCart,activeTab,setActiveTab}) => {
 
     <div className="w-20 h-20 mx-auto rounded-full bg-gray-400 flex items-center justify-center shadow-lg">
         <img
-            src="/src/assets/rocket.png"
+            src="/assets/rocket.png"
             alt="user"
             className="w-10 h-10 object-contain"
         />
