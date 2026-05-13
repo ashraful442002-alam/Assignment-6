@@ -1,7 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaCartArrowDown } from "react-icons/fa";
 
 const Navbar = () => {
+
+
+    const [showLogin, setShowLogin] = useState(false);
+
+    const handleLogin = (e) => {
+
+    e.preventDefault();
+
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    if (
+        email === "admin@gmail.com" &&
+        password === "admin123"
+    ) {
+
+        alert("Login Successful");
+
+        setShowLogin(false);
+
+    } else {
+
+        alert("Wrong Email or Password");
+
+    }
+
+}
     return (
         <div className="navbar flex flex-col md:flex-row justify-between items-center bg-base-100 p-4 border-b-2 border-gray-300 gap-4">
 
@@ -24,9 +51,67 @@ const Navbar = () => {
                     <FaCartArrowDown />
                 </button>
 
-                <button className='btn hover:bg-gray-200'>
+                <div className='relative'>
+
+
+    <button
+        onClick={() => setShowLogin(!showLogin)}
+        className='btn hover:bg-gray-200'
+    >
+        Login
+    </button>
+
+    {
+        showLogin && (
+
+            <div className='absolute right-0 mt-4 w-80 bg-white shadow-2xl rounded-2xl p-6 z-50'>
+
+                <h2 className='text-2xl font-bold mb-4 text-center'>
                     Login
-                </button>
+                </h2>
+
+                <form
+                    onSubmit={handleLogin}
+                    className='space-y-4'
+                >
+
+                    <input
+                        type="email"
+                        name='email'
+                        deafualtValue="admin@gmail.com"
+                        placeholder='Email'
+                        className='input input-bordered w-full'
+                        required
+                        
+                    />
+                    <p className='text-gray-400 font-light'>Email : admin@gmail.com</p>
+                    
+
+                    <input
+                        type="password"
+                        defaultValue="admin123"
+                        name='password'
+                        placeholder='Password'
+                        className='input input-bordered w-full'
+                        required
+                    />
+                    <p className='text-gray-400 font-light'>Password : admin123</p>
+
+                    <button
+                        type='submit'
+                        className='btn btn-primary w-full'
+                    >
+                        Login
+                    </button>
+
+                </form>
+
+            </div>
+
+        )
+    }
+
+</div>
 
                 <button className='btn btn-primary hover:scale-105 duration-200'>
                     Getting Started
